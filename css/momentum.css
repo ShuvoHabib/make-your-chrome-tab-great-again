@@ -2,9 +2,12 @@ body{
     font-family: 'Roboto', sans-serif;
 }
 .bg-wrapper{
-    background-image:url('https://source.unsplash.com/category/nature/1920x1080');
-    background-size:cover;
     height:100vh;
+    background: url('https://source.unsplash.com/category/nature/1920x1080') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
 .bg-wrapper h1{
@@ -67,27 +70,51 @@ h2{
 }
 
 .quote{
-    color: white;
-    font-size: 2vw;
-    letter-spacing: 1px;
-    line-height: 1;
-    margin:0;
+    /* color: white; */
+    /* font-size: 2vw; */
+    /* letter-spacing: 1px; */
+    /* line-height: 1; */
+    /* margin:0; */
 }
 
 #quote-text{
-    font-size: 110%;
-    font-weight: 400;
+    font-size: 15px;
+    font-weight: 300;
     margin: 0;
     color: rgba(255,255,255,.9);
-    line-height: 120%;
+    line-height: 24px;
     transition: all .35s ease;
 }
 
 .weather{
-    font-family: "Helvetica Neue";
     color: white;
     font-size: 3vw;
     letter-spacing: 1px;
     line-height: 1;
     margin:0;
+}
+.clouds-flat-button {
+    top: 30px;
+    position: relative;
+    vertical-align: top;
+    width: 100%;
+    height: 60px;
+    padding: 5px 20px;
+    font-size: 22px;
+    color: #454545;
+    text-align: center;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+    background: #ecf0f1;
+    border: 0;
+    border-bottom: 2px solid #dadedf;
+    cursor: pointer;
+    -webkit-box-shadow: inset 0 -2px #dadedf;
+    box-shadow: inset 0 -2px #dadedf;
+}
+.clouds-flat-button:hover{
+    text-decoration: none;
+}
+.quote-author{
+    font-size: 15px;
+    color: white;
 }
