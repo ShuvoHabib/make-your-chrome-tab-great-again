@@ -8,7 +8,7 @@ momentum.Core = function () {
     this.quoteAuthorStr = "";
     this.weatherStr = "";
     this.ampm = "AM";
-    this.salutation = "morning";
+    this.salutation = "Morning, ";
     this.location = "";
     this.timeEl = $("#time");
     this.quoteEl = $("#quote-text");
@@ -28,10 +28,10 @@ momentum.Core.prototype = {
         var date = new Date();
         var hours = date.getHours();
         if (hours > 12) {
-            this.salutation = "afternoon";
+            this.salutation = "Afternoon, ";
         }
         if (hours > 18) {
-            this.salutation = "evening";
+            this.salutation = "Evening, ";
         }
         if (hours > 11 && hours < 24) {
             this.ampm = "PM";
@@ -96,3 +96,21 @@ momentum.Core.prototype = {
         this.quoteAuthor.text(this.quoteAuthorStr);
     }
 };
+var progress = setInterval(function () {
+    var $bar = $("#bar");
+
+    if ($bar.width() >= 600) {
+        clearInterval(progress);
+    } else {
+        $bar.width($bar.width() + 60);
+    }
+    $bar.text($bar.width() / 6 + "%");
+    if ($bar.width() / 6 == 100){
+        $bar.text("Still working ... " + $bar.width() / 6 + "%");
+    }
+}, 800);
+
+$(window).load(function() {
+    $("#bar").width(600);
+    $(".loader").fadeOut(3000);
+});

@@ -16,26 +16,36 @@
 </head>
 <body>
 <!-- YOUR HTML IN HERE -->
+<div class='loader'>
+    <div class='loader-container'>
+        <div class='progress progress-striped active'>
+            <div class='progress-bar progress-bar-info'
+                 id='bar' role='progressbar' style='width: 0%;'
+            >
+            </div>
+        </div>
+    </div>
+</div>
 <div class="bg-wrapper" style="background-image: url('https://source.unsplash.com/category/nature/1920x1080')">
     <div class="text-right top-right weather">
         <div><i class="wi wi-day-sunny"></i>&nbsp;
             <span id="weather"></span>&#8451;
         </div>
         <h5 id="location"></h5>
+        <img class="download-icon" src="downloadicon.png" alt="Download"/>
+        <a class="clouds-flat-button"
+           href="https://source.unsplash.com/category/nature/1920x1080" download>
+            Get unlimited photos
+        </a>
     </div>
     <div class="text-center centered">
         <div class="block-text">
             <h1 id="time"></h1>
             <h2 id="ampm"></h2>
         </div>
-        <h2 id="greetings"></h2>
-        <div id="someDiv"></div>
-        <input id="someInput" type="text">
-        <input type="button" value="Save Your Name" onClick="doStuff()">
-        <div>
-            <a class="clouds-flat-button" href="https://source.unsplash.com/category/nature/1920x1080" download>Download
-                unlimited photos</a>
-        </div>
+        <span class="greetings-text" id="greetings"></span>
+        <span class="greetings-text" id="someDiv"></span>
+        <input name="server" id="someInput" placeholder="Save Your Name" type="text" onkeypress="return doStuff(event)"/>
     </div>
     <div class="text-center bottom-third quote">
         <div class="quote-text">" <span id="quote-text"></span> "</div>
@@ -45,12 +55,24 @@
 <script src="js/start.js"></script>
 <script src="js/location.js"></script>
 <script>
-    function doStuff() {
+    function doStuff(e) {
         var nameElement = document.getElementById("someInput");
-        var theName = nameElement.value;
-        document.getElementById("someDiv").innerHTML += theName;
+        localStorage.setItem('server', nameElement.value);
+        if (e.keyCode == 13) {
+            document.getElementById("someDiv").innerHTML += localStorage.getItem('server');
+            $('input').hide();
+        }
+    }
+    $('#someDiv').click(function () {
+        $('#someDiv').empty();
+        $('input').show();
+    })
+
+    if(localStorage.getItem('server') != undefined ){
+        document.getElementById("someDiv").innerHTML += localStorage.getItem('server');
         $('input').hide();
     }
+    console.log(localStorage.getItem('server'));
 </script>
 </body>
 </html>
