@@ -1,0 +1,20 @@
+{
+  "manifest_version": 2,
+  "name": "Tab Background Image",
+  "version": "1.0",
+  "description": "Tab Background Image by Shuvo Habib",
+
+  "browser_action": {
+    "default_icon": "logo.png"
+  },
+
+    "chrome_url_overrides": {
+      "newtab": "momentum.html"
+    },
+
+  "permissions": [
+    "activeTab",
+    "https://ajax.googleapis.com/",
+    "geolocation"
+  ]
+}
