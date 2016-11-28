@@ -3,7 +3,8 @@ body{
 }
 .bg-wrapper{
     height:100vh;
-    background: url('https://source.unsplash.com/category/nature/1920x1080') no-repeat center center fixed;
+    background-repeat: no-repeat;
+    background-position: center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -77,7 +78,7 @@ h2{
     /* margin:0; */
 }
 
-#quote-text{
+.quote-text{
     font-size: 15px;
     font-weight: 300;
     margin: 0;
@@ -88,7 +89,7 @@ h2{
 
 .weather{
     color: white;
-    font-size: 3vw;
+    font-size: 21px;
     letter-spacing: 1px;
     line-height: 1;
     margin:0;
@@ -117,4 +118,19 @@ h2{
 .quote-author{
     font-size: 15px;
     color: white;
+}
+input{
+    border: 1px solid white;
+    background: none;
+    padding: 0;
+    font-size: 24px;
+    outline: 0;
+    width: 100%;
+    -webkit-tap-highlight-color: transparent;
+    margin-bottom: 5px;
+    color: #fff;
+}
+div#someDiv {
+    color: white;
+    font-size: 40px;
 }

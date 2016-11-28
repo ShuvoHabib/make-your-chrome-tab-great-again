@@ -16,26 +16,41 @@
 </head>
 <body>
 <!-- YOUR HTML IN HERE -->
-    <div class="bg-wrapper">
-        <div class="text-right top-right weather">
-            <div><i class="wi wi-day-sunny"></i>&nbsp;
-                <span id="weather"></span>&#8451;
-            </div>
-            <h5 id="location"></h5>
+<div class="bg-wrapper" style="background-image: url('https://source.unsplash.com/category/nature/1920x1080')">
+    <div class="text-right top-right weather">
+        <div><i class="wi wi-day-sunny"></i>&nbsp;
+            <span id="weather"></span>&#8451;
         </div>
-        <div class="text-center centered">
-            <div class="block-text">
-                <h1 id="time"></h1>
-                <h2 id="ampm"></h2>
-            </div>
-            <h2 id="greetings"></h2>
-            <a class="clouds-flat-button" href="https://source.unsplash.com/category/nature/1920x1080" download>Download this Background</a>
+        <h5 id="location"></h5>
+    </div>
+    <div class="text-center centered">
+        <div class="block-text">
+            <h1 id="time"></h1>
+            <h2 id="ampm"></h2>
         </div>
-        <div class="text-center bottom-third quote">
-            <div>"<span id="quote-text"></span>"</div>
-            <div class="quote-author">by <span id="quote-author"></span></div>
+        <h2 id="greetings"></h2>
+        <div id="someDiv"></div>
+        <input id="someInput" type="text">
+        <input type="button" value="Save Your Name" onClick="doStuff()">
+        <div>
+            <a class="clouds-flat-button" href="https://source.unsplash.com/category/nature/1920x1080" download>Download
+                unlimited photos</a>
         </div>
     </div>
+    <div class="text-center bottom-third quote">
+        <div class="quote-text">"<span id="quote-text"></span>"</div>
+        <div class="quote-author">by <span id="quote-author"></span></div>
+    </div>
+</div>
 <script src="js/start.js"></script>
+<script src="js/location.js"></script>
+<script>
+    function doStuff() {
+        var nameElement = document.getElementById("someInput");
+        var theName = nameElement.value;
+        document.getElementById("someDiv").innerHTML += theName;
+        $('input').hide();
+    }
+</script>
 </body>
 </html>

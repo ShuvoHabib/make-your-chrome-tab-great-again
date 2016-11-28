@@ -55,7 +55,6 @@ momentum.Core.prototype = {
         this.quoteEl.text(this.quoteStr);
         this.quoteAuthor.text(this.quoteAuthorStr);
         this.render();
-        console.log(quoteData);
     },
     setWeather: function (weatherData) {
         this.weatherStr = Math.floor(weatherData.main.temp - 273.15);
@@ -82,23 +81,19 @@ momentum.Core.prototype = {
         navigator.geolocation.getCurrentPosition(function (position) {
             this.lat = position.coords.latitude;
             this.lon = position.coords.longitude;
-            //console.log(this.lat, this.lon);
+            console.log(this.lat, this.lon);
             this.updateWeather();
         }.bind(this), error);
         this.setTime();
-
         this.updateQuote();
         this.render();
-
-
     },
     render: function () {
         this.timeEl.text(this.timeStr);
-        this.greetingEl.text("Good " + this.salutation + ", Shuvo Habib");
+        this.greetingEl.text("Good " + this.salutation);
         this.ampmEl.text(this.ampm);
         this.weatherEl.text(this.weatherStr);
         this.quoteEl.text(this.quoteStr);
         this.quoteAuthor.text(this.quoteAuthorStr);
-        this.city.text(this.location);
     }
 };
