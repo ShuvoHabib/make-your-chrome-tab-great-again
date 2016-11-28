@@ -194,7 +194,6 @@ h5#location {
 }
 
 [placeholder]:focus::-webkit-input-placeholder {
-    transition: opacity 0.3s 0.3s ease;
     opacity: 0;
 }
 
