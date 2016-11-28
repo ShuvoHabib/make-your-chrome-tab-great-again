@@ -16,7 +16,6 @@ momentum.Core = function () {
     this.weatherEl = $("#weather");
     this.greetingEl = $("#greetings");
     this.ampmEl = $("#ampm");
-    this.city = $("#location");
     this.lat;
     this.lon;
     this.weatherCtrl = new momentum.WeatherCtrl();

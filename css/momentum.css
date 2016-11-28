@@ -79,12 +79,13 @@ h2{
 }
 
 .quote-text{
-    font-size: 15px;
+    font-size: 20px;
     font-weight: 300;
     margin: 0;
     color: rgba(255,255,255,.9);
-    line-height: 24px;
+    line-height: 30px;
     transition: all .35s ease;
+    margin-bottom: 15px;
 }
 
 .weather{
