@@ -4,6 +4,7 @@ body {
 
 .bg-wrapper {
     height: 100vh;
+    background-image:url('https://source.unsplash.com/category/nature/1920x1080');
     background-repeat: no-repeat;
     background-position: center center fixed;
     -webkit-background-size: cover;
@@ -118,16 +119,12 @@ h2, .greetings-text {
     color: white;
 }
 
-input {
+input.name-input {
     border-bottom: 1px solid white;
     background: none;
     padding: 8px;
     font-size: 24px;
     outline: 0;
-    /* width: 100%; */
-    /* -webkit-tap-highlight-color: transparent; */
-    /* margin-bottom: 5px; */
-    /* color: #fff; */
     border-top: none;
     border-left: none;
     border-right: none;
@@ -189,7 +186,7 @@ h5#location {
     font-weight: 400;
 }
 
-::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+::-webkit-input-placeholder.name-input { /* Chrome/Opera/Safari */
     color: white;
 }
 
@@ -197,6 +194,6 @@ h5#location {
     opacity: 0;
 }
 
-input:focus {
+input:focus.name-input {
     color: white
 }

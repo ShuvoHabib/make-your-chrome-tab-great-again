@@ -24,7 +24,6 @@ momentum.Core = function () {
 
 momentum.Core.prototype = {
     setTime: function () {
-        // YOUR CODE HERE
         var date = new Date();
         var hours = date.getHours();
         if (hours > 12) {
@@ -76,11 +75,11 @@ momentum.Core.prototype = {
         }
         function error() {
             throw "Error occured!";
-        };
+        }
+
         navigator.geolocation.getCurrentPosition(function (position) {
             this.lat = position.coords.latitude;
             this.lon = position.coords.longitude;
-            console.log(this.lat, this.lon);
             this.updateWeather();
         }.bind(this), error);
         this.setTime();
@@ -105,12 +104,37 @@ var progress = setInterval(function () {
         $bar.width($bar.width() + 60);
     }
     $bar.text($bar.width() / 6 + "%");
-    if ($bar.width() / 6 == 100){
+    if ($bar.width() / 6 == 100) {
         $bar.text("Still working ... " + $bar.width() / 6 + "%");
     }
 }, 800);
 
-$(window).load(function() {
+$(window).load(function () {
     $("#bar").width(600);
     $(".loader").fadeOut(3000);
 });
+
+function doStuff(evt) {
+    var nameElement = document.getElementById("someInput");
+    localStorage.setItem('server', nameElement.value);
+    var evt = evt || window.event;
+    if (evt.keyCode == 13) {
+        document.getElementById("someDiv").innerHTML += localStorage.getItem('server');
+        $('input').hide();
+    }
+}
+$('#someDiv').click(function () {
+    $('#someDiv').empty();
+    $('input').show();
+})
+
+$("#someInput").keyup(function (e) {
+    return doStuff();
+});
+
+if (localStorage.getItem('server') != undefined) {
+    document.getElementById("someDiv").innerHTML += localStorage.getItem('server');
+    $('input').hide();
+}
+console.info("Dev: Shuvo Habib");
+console.info("Web: www.shuvohabib.com");
