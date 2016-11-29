@@ -186,7 +186,7 @@ h5#location {
     font-weight: 400;
 }
 
-::-webkit-input-placeholder.name-input { /* Chrome/Opera/Safari */
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
     color: white;
 }
 
@@ -194,6 +194,6 @@ h5#location {
     opacity: 0;
 }
 
-input:focus.name-input {
+input:focus {
     color: white
 }
