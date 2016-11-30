@@ -95,23 +95,11 @@ momentum.Core.prototype = {
         this.quoteAuthor.text(this.quoteAuthorStr);
     }
 };
-var progress = setInterval(function () {
-    var $bar = $("#bar");
-
-    if ($bar.width() >= 600) {
-        clearInterval(progress);
-    } else {
-        $bar.width($bar.width() + 60);
-    }
-    $bar.text($bar.width() / 6 + "%");
-    if ($bar.width() / 6 == 100) {
-        $bar.text("Still working ... " + $bar.width() / 6 + "%");
-    }
-}, 800);
 
 $(window).load(function () {
-    $("#bar").width(600);
-    $(".loader").fadeOut(3000);
+    $('#preloader').fadeOut('slow', function () {
+        $(this).remove();
+    });
 });
 
 function doStuff(evt) {
@@ -136,5 +124,12 @@ if (localStorage.getItem('server') != undefined) {
     document.getElementById("someDiv").innerHTML += localStorage.getItem('server');
     $('input').hide();
 }
+
+if (navigator.onLine) {
+    document.querySelector('.bg-wrapper').setAttribute("style", "background-image: url('https://source.unsplash.com/daily') !important ");
+} else {
+    $('.quote, .clouds-flat-button, .weather').hide();
+}
+
 console.info("Dev: Shuvo Habib");
 console.info("Web: www.shuvohabib.com");

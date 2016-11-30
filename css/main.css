@@ -4,7 +4,7 @@ body {
 
 .bg-wrapper {
     height: 100vh;
-    background-image:url('https://source.unsplash.com/category/nature/1920x1080');
+    background-image: url('https://source.unsplash.com/category/nature/1920x1080');
     background-repeat: no-repeat;
     background-position: center center fixed;
     -webkit-background-size: cover;
@@ -152,26 +152,15 @@ div#someDiv {
 
 /* Preloader with Bootstrap Progress Bar
 -----------------------------------------------*/
-.loader {
+div#preloader {
     position: fixed;
     left: 0;
     top: 0;
+    z-index: 999;
     width: 100%;
     height: 100%;
-    z-index: 99;
-    background: url(&#39;https://6ed03b3e7ee716b29bc2dee79aafb8179ed53b19-www.googledrive.com/host/0B9VLbslO6g64UnFTUlQzWDVMdXM&#39;) 50% 50% no-repeat rgb(249, 249, 249);
-}
-
-.loader-container {
-    width: 600px;
-    height: 200px;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: auto;
-    text-align: center;
+    overflow: visible;
+    background: #333 url('http://files.mimoymima.com/images/loading.gif') no-repeat center center;
 }
 
 h5#location {
@@ -191,7 +180,15 @@ input:focus {
 }
 
 @media (max-width: 700px) {
-    body{
+    body {
         overflow: hidden;
     }
+}
+
+a:focus {
+    outline: -webkit-focus-ring-color auto 5px;
+    outline-offset: -2px;
+    outline: none;
+    color: white;
+    text-decoration: none !important;
 }

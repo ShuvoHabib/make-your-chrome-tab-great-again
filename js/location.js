@@ -35,7 +35,7 @@ var errorCallback = function (error) {
             errorMessage = 'Timeout';
             break;
     }
-    document.write(errorMessage);
+    console.log(errorMessage);
 };
 
 var options = {

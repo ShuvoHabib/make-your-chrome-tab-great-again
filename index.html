@@ -9,19 +9,10 @@
     <link rel="stylesheet" href="out/bootstrap.min.css">
     <link rel="stylesheet" href="out/main.css" type="text/css">
 </head>
-<body style="-webkit-print-color-adjust:exact;">
+<body>
 <!-- YOUR HTML IN HERE -->
-<div class='loader'>
-    <div class='loader-container'>
-        <div class='progress progress-striped active'>
-            <div class='progress-bar progress-bar-info'
-                 id='bar' role='progressbar' style='width: 0%;'
-            >
-            </div>
-        </div>
-    </div>
-</div>
-<div class="bg-wrapper" style="background-image: url('https://source.unsplash.com/daily')">
+<div id="preloader"></div>
+<div class="bg-wrapper" style="background-image: url('bg.jpeg')">
     <div class="text-right top-right weather">
         <div><i class="wi wi-day-sunny"></i>&nbsp;
             <span id="weather"></span>&#8451;
@@ -52,13 +43,12 @@
         <div class="quote-author">by <span id="quote-author"></span></div>
     </div>
 </div>
-<script src="js/jquery.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/weather.js"></script>
-<script src="js/quote.js"></script>
-<script src="js/location.js"></script>
-<script src="js/main.js"></script>
-<script src="js/start.js"></script>
+<script src="dist/jquery.min.js"></script>
+<script src="dist/weather.js"></script>
+<script src="dist/quote.js"></script>
+<script src="dist/location.js"></script>
+<script src="dist/main.js"></script>
+<script src="dist/start.js"></script>
 
 </body>
 </html>
