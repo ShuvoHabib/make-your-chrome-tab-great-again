@@ -73,14 +73,6 @@ h2, .greetings-text {
     display: inline;
 }
 
-.quote {
-    /* color: white; */
-    /* font-size: 2vw; */
-    /* letter-spacing: 1px; */
-    /* line-height: 1; */
-    /* margin:0; */
-}
-
 .quote-text {
     font-size: 20px;
     font-weight: 300;
@@ -196,4 +188,10 @@ h5#location {
 
 input:focus {
     color: white
+}
+
+@media (max-width: 700px) {
+    body{
+        overflow: hidden;
+    }
 }

@@ -1,15 +1,15 @@
 {
   "manifest_version": 2,
-  "name": "Tab Background Image",
+  "name": "Make your tab great again",
   "version": "1.0",
-  "description": "Tab Background Image by Shuvo Habib",
+  "description": "Make your tab great again by Shuvo Habib",
 
   "browser_action": {
     "default_icon": "logo.png"
   },
 
     "chrome_url_overrides": {
-      "newtab": "momentum.html"
+      "newtab": "index.html"
     },
 
   "permissions": [
