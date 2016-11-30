@@ -1,0 +1,41 @@
+/*!
+ *  Weather Icons 2.0
+ *  Updated August 1, 2015
+ *  Weather themed icons for Bootstrap
+ *  Author - Erik Flowers - erik@helloerik.com
+ *  Email: erik@helloerik.com
+ *  Twitter: http://twitter.com/Erik_UX
+ *  ------------------------------------------------------------------------------
+ *  Maintained at http://erikflowers.github.io/weather-icons
+ *
+ *  License
+ *  ------------------------------------------------------------------------------
+ *  - Font licensed under SIL OFL 1.1 -
+ *    http://scripts.sil.org/OFL
+ *  - CSS, SCSS and LESS are licensed under MIT License -
+ *    http://opensource.org/licenses/mit-license.html
+ *  - Documentation licensed under CC BY 3.0 -
+ *    http://creativecommons.org/licenses/by/3.0/
+ *  - Inspired by and works great as a companion with Font Awesome
+ *    "Font Awesome by Dave Gandy - http://fontawesome.io"
+ *//*!
+ *  Weather Icons 2.0
+ *  Updated August 1, 2015
+ *  Weather themed icons for Bootstrap
+ *  Author - Erik Flowers - erik@helloerik.com
+ *  Email: erik@helloerik.com
+ *  Twitter: http://twitter.com/Erik_UX
+ *  ------------------------------------------------------------------------------
+ *  Maintained at http://erikflowers.github.io/weather-icons
+ *
+ *  License
+ *  ------------------------------------------------------------------------------
+ *  - Font licensed under SIL OFL 1.1 -
+ *    http://scripts.sil.org/OFL
+ *  - CSS, SCSS and LESS are licensed under MIT License -
+ *    http://opensource.org/licenses/mit-license.html
+ *  - Documentation licensed under CC BY 3.0 -
+ *    http://creativecommons.org/licenses/by/3.0/
+ *  - Inspired by and works great as a companion with Font Awesome
+ *    "Font Awesome by Dave Gandy - http://fontawesome.io"
+ */@font-face{font-family:weathericons;src:url(../font/weathericons-regular-webfont.eot);src:url(../font/weathericons-regular-webfont.eot?#iefix) format('embedded-opentype'),url(../font/weathericons-regular-webfont.woff2) format('woff2'),url(../font/weathericons-regular-webfont.woff) format('woff'),url(../font/weathericons-regular-webfont.ttf) format('truetype'),url(../font/weathericons-regular-webfont.svg#weather_iconsregular) format('svg');font-weight:400;font-style:normal}.wi{display:inline-block;font-family:weathericons;font-style:normal;font-weight:400;line-height:1;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.wi-day-sunny:before{content:"\f00d"}.wi-fire:before{content:"\f0c7"}.wi-time-1:before{content:"\f08a"}.wi-time-2:before{content:"\f08b"}.wi-time-3:before{content:"\f08c"}.wi-time-4:before{content:"\f08d"}.wi-time-5:before{content:"\f08e"}.wi-time-6:before{content:"\f08f"}.wi-time-7:before{content:"\f090"}.wi-time-8:before{content:"\f091"}.wi-time-9:before{content:"\f092"}.wi-time-10:before{content:"\f093"}.wi-time-11:before{content:"\f094"}.wi-time-12:before{content:"\f089"}
