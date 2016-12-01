@@ -127,17 +127,33 @@ if (localStorage.getItem('server') != undefined) {
 
 if (navigator.onLine) {
     document.querySelector('.bg-wrapper').setAttribute("style", "background-image: url('https://source.unsplash.com/daily') !important ");
-
-    var clicks = 0;
-    $(".changeBg").click(function () {
-        clicks++;
-        document.querySelector('.bg-wrapper').setAttribute("style", "background-image:" + "url" + "(" + 'bg/bg' + clicks + '.jpeg' + ")" + '!important');
-
-    });
-
 } else {
     $('.quote, .clouds-flat-button, .weather').hide();
 }
+
+var clicks = 1;
+$(".changeBg-right").click(function () {
+    console.log(clicks);
+    if (clicks < 6) {
+        clicks++;
+        document.querySelector('.bg-wrapper').setAttribute("style", "background-image:" + "url" + "(" + 'bg/bg' + clicks + '.jpeg' + ")" + '!important');
+    } else
+    {
+        clicks = 0;
+        document.querySelector('.bg-wrapper').setAttribute("style", "background-image: url('https://source.unsplash.com/daily') !important ");
+    }
+});
+$(".changeBg-left").click(function () {
+    console.log(clicks);
+    if (clicks > 1) {
+        clicks--;
+        document.querySelector('.bg-wrapper').setAttribute("style", "background-image:" + "url" + "(" + 'bg/bg' + clicks + '.jpeg' + ")" + '!important');
+    } else
+    {
+        clicks = 7;
+        document.querySelector('.bg-wrapper').setAttribute("style", "background-image: url('https://source.unsplash.com/daily') !important ");
+    }
+});
 
 console.info("Dev: Shuvo Habib");
 console.info("Web: www.shuvohabib.com");

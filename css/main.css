@@ -191,3 +191,15 @@ a:focus {
     color: white;
     text-decoration: none !important;
 }
+.changeBg-right,.changeBg-left {
+    font-size: 110px;
+    color: white;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.changeBg-right{
+    right: 0;
+}
