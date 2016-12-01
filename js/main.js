@@ -127,6 +127,12 @@ if (localStorage.getItem('server') != undefined) {
 
 if (navigator.onLine) {
     document.querySelector('.bg-wrapper').setAttribute("style", "background-image: url('https://source.unsplash.com/daily') !important ");
+    for (var i = 1; i < 6; i=i+1) {
+        $('.changeBg').click(function () {
+            console.log(i);
+            document.querySelector('.bg-wrapper').setAttribute("style", "background-image:" + "url" + "(" + 'bg/bg' + i + '.jpeg' + ")" + '!important');
+        })
+    }
 } else {
     $('.quote, .clouds-flat-button, .weather').hide();
 }
