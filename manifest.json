@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "Make your tab great again",
-  "version": "1.0",
+  "version": "1.0.2",
   "description": "Make your tab great again by Shuvo Habib",
 
   "browser_action": {

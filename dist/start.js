@@ -1,0 +1,1 @@
+var core=new momentum.Core;core.start(),setInterval(function(){core.updateTime(),core.render()},3e4),setInterval(function(){core.updateWeather(),core.render()},6e5);
