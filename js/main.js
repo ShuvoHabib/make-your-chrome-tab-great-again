@@ -130,19 +130,20 @@ if (navigator.onLine) {
     if (localStorage.getItem('bg') === undefined) {
         localStorage.setItem('bg', 'https://source.unsplash.com/daily');
         var getunsplash = localStorage.getItem('bg');
-        document.querySelector('.bg-wrapper').setAttribute("style", "background-image:" + "url" + "(" + getunsplash + ")" + '!important');
+        setTimeout(function() { document.querySelector('.bg-wrapper').setAttribute("style", "background-image:" + "url" + "(" + getunsplash + ")" + '!important') }, 5000);
+
     } else {
         var getBg = localStorage.getItem('bg');
         document.querySelector('.bg-wrapper').setAttribute("style", "background-image:" + "url" + "(" + 'bg/bg' + getBg + '.jpeg' + ")" + '!important');
     }
 } else {
-    $('.quote, .clouds-flat-button, .weather').hide();
+    $('.quote, .clouds-flat-button, .weather, .download-icon').hide();
     $('.direction').hide();
 }
 
-var clicks = 2;
+var clicks = 0;
 $(".changeBg-right").click(function () {
-    if (clicks < 6) {
+    if (clicks < 10) {
         clicks++;
         localStorage.setItem('bg', clicks);
         var getBg = localStorage.getItem('bg');
@@ -166,7 +167,7 @@ $(".changeBg-left").click(function () {
         document.querySelector('.setbglink').setAttribute("href", 'bg/bg' + getBg + '.jpeg');
     } else
     {
-        clicks = 7;
+        clicks = 11;
         localStorage.setItem('bg', 'https://source.unsplash.com/daily');
         var getunsplash = localStorage.getItem('bg');
         document.querySelector('.bg-wrapper').setAttribute("style", "background-image:" + "url" + "(" + getunsplash + ")" + '!important');

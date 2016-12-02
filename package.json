@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "gulp-clean-css": "^2.0.13",
+    "gulp-purifycss": "^0.2.0",
+    "gulp-uglify": "^2.0.0",
+    "pump": "^1.0.1"
+  }
+}
