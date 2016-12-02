@@ -1,7 +1,9 @@
 body {
     font-family: 'Roboto', sans-serif;
 }
-
+*{
+    outline: 0;
+}
 .bg-wrapper {
     height: 100vh;
     background-repeat: no-repeat;
@@ -91,7 +93,7 @@ h2, .greetings-text {
 }
 
 .clouds-flat-button {
-    padding: 5px 25px;
+    padding: 5px 0px 5px 25px;
     font-size: 14px;
     color: white;
     text-align: center;
@@ -201,5 +203,8 @@ a:focus {
 }
 
 .changeBg-right{
-    right: 0;
+    right: 5px;
+}
+.changeBg-left.pull-left {
+    left: 5px;
 }
