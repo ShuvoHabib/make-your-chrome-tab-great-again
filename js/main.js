@@ -141,7 +141,16 @@ if (navigator.onLine) {
     $('.direction').hide();
 }
 
+$(document).keyup(function(e){
+    if (e.keyCode ==39){
+        $(".changeBg-right").trigger("click");
+    } else if(e.keyCode ==37) {
+        $(".changeBg-left").trigger("click");
+    }
+});
+
 var clicks = 0;
+
 $(".changeBg-right").click(function () {
     if (clicks < 10) {
         clicks++;
