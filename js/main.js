@@ -96,11 +96,7 @@ momentum.Core.prototype = {
     }
 };
 
-$(window).load(function () {
-    $('#preloader').fadeOut('slow', function () {
-        $(this).remove();
-    });
-});
+
 
 function doStuff(evt) {
     var nameElement = document.getElementById("someInput");
@@ -142,7 +138,7 @@ if (navigator.onLine) {
 }
 
 $(document).keyup(function(e){
-    if (e.keyCode ==39){
+    if (e.keyCode == 39){
         $(".changeBg-right").trigger("click");
     } else if(e.keyCode ==37) {
         $(".changeBg-left").trigger("click");
@@ -190,5 +186,8 @@ if(getBgun === 'https://source.unsplash.com/daily'){
     document.querySelector('.bg-wrapper').setAttribute("style", "background-image:" + "url" + "(" + getBgun + ")" + '!important');
 }
 
-console.info("Dev: Shuvo Habib");
-console.info("Web: www.shuvohabib.com");
+$(window).load(function () {
+    $('#preloader').fadeOut('slow', function () {
+        $(this).remove();
+    });
+});
