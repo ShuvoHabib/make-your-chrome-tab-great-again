@@ -82,6 +82,13 @@ h2, .greetings-text {
     line-height: 30px;
     transition: all .35s ease;
     margin-bottom: 15px;
+    letter-spacing: 0.4px;
+}
+.quote-text:before{
+    content: '"';
+}
+.quote-text:after{
+    content: ' "';
 }
 
 .weather {
