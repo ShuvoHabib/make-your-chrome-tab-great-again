@@ -96,8 +96,6 @@ momentum.Core.prototype = {
     }
 };
 
-
-
 function doStuff(evt) {
     var nameElement = document.getElementById("someInput");
     localStorage.setItem('server', nameElement.value);
@@ -121,26 +119,28 @@ if (localStorage.getItem('server') != undefined) {
     $('input').hide();
 }
 
-
 if (navigator.onLine) {
-    if (localStorage.getItem('bg') === undefined) {
+    if (localStorage.getItem('bg') === undefined || null) {
         localStorage.setItem('bg', 'https://source.unsplash.com/daily');
         var getunsplash = localStorage.getItem('bg');
-        setTimeout(function() { document.querySelector('.bg-wrapper').setAttribute("style", "background-image:" + "url" + "(" + getunsplash + ")" + '!important') }, 5000);
-
+        document.querySelector('.bg-wrapper').setAttribute("style", "background-image:" + "url" + "(" + getunsplash + ")" + '!important')
     } else {
         var getBg = localStorage.getItem('bg');
-        document.querySelector('.bg-wrapper').setAttribute("style", "background-image:" + "url" + "(" + 'bg/bg' + getBg + '.jpeg' + ")" + '!important');
+        if(getBg != null ) {
+            document.querySelector('.bg-wrapper').setAttribute("style", "background-image:" + "url" + "(" + 'bg/bg' + getBg + '.jpeg' + ")" + '!important');
+        } else {
+            document.querySelector('.bg-wrapper').setAttribute("style", "background-image:" + "url" + "(" + 'bg/bg' + 8 + '.jpeg' + ")" + '!important');
+        }
     }
 } else {
     $('.quote, .clouds-flat-button, .weather, .download-icon').hide();
     $('.direction').hide();
 }
 
-$(document).keyup(function(e){
-    if (e.keyCode == 39){
+$(document).keyup(function (e) {
+    if (e.keyCode == 39) {
         $(".changeBg-right").trigger("click");
-    } else if(e.keyCode ==37) {
+    } else if (e.keyCode == 37) {
         $(".changeBg-left").trigger("click");
     }
 });
@@ -154,8 +154,7 @@ $(".changeBg-right").click(function () {
         var getBg = localStorage.getItem('bg');
         document.querySelector('.bg-wrapper').setAttribute("style", "background-image:" + "url" + "(" + 'bg/bg' + getBg + '.jpeg' + ")" + '!important');
         document.querySelector('.setbglink').setAttribute("href", 'bg/bg' + getBg + '.jpeg');
-    } else
-    {
+    } else {
         clicks = 0;
         localStorage.setItem('bg', 'https://source.unsplash.com/daily');
         var getunsplash = localStorage.getItem('bg');
@@ -170,8 +169,7 @@ $(".changeBg-left").click(function () {
         var getBg = localStorage.getItem('bg');
         document.querySelector('.bg-wrapper').setAttribute("style", "background-image:" + "url" + "(" + 'bg/bg' + getBg + '.jpeg' + ")" + '!important');
         document.querySelector('.setbglink').setAttribute("href", 'bg/bg' + getBg + '.jpeg');
-    } else
-    {
+    } else {
         clicks = 11;
         localStorage.setItem('bg', 'https://source.unsplash.com/daily');
         var getunsplash = localStorage.getItem('bg');
@@ -180,9 +178,8 @@ $(".changeBg-left").click(function () {
     }
 });
 
-
 var getBgun = localStorage.getItem('bg');
-if(getBgun === 'https://source.unsplash.com/daily'){
+if (getBgun === 'https://source.unsplash.com/daily') {
     document.querySelector('.bg-wrapper').setAttribute("style", "background-image:" + "url" + "(" + getBgun + ")" + '!important');
 }
 
