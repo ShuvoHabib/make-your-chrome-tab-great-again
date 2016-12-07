@@ -4,22 +4,17 @@ window.momentum = window.momentum || {};
 
 momentum.Core = function () {
     this.timeStr = "";
-    this.quoteStr = "";
-    this.quoteAuthorStr = "";
     this.weatherStr = "";
     this.ampm = "AM";
     this.salutation = "Morning, ";
     this.location = "";
     this.timeEl = $("#time");
-    this.quoteEl = $("#quote-text");
-    this.quoteAuthor = $("#quote-author");
     this.weatherEl = $("#weather");
     this.greetingEl = $("#greetings");
     this.ampmEl = $("#ampm");
     this.lat;
     this.lon;
     this.weatherCtrl = new momentum.WeatherCtrl();
-    this.quoteCtrl = new momentum.QuoteCtrl();
 };
 
 momentum.Core.prototype = {
@@ -47,13 +42,6 @@ momentum.Core.prototype = {
         ret = ret + hours + ':' + mins;
         this.timeStr = ret;
     },
-    setQuote: function (quoteData) {
-        this.quoteStr = JSON.parse(quoteData).quote;
-        this.quoteAuthorStr = JSON.parse(quoteData).author;
-        this.quoteEl.text(this.quoteStr);
-        this.quoteAuthor.text(this.quoteAuthorStr);
-        this.render();
-    },
     setWeather: function (weatherData) {
         this.weatherStr = Math.floor(weatherData.main.temp - 273.15);
         this.location = weatherData.name;
@@ -64,10 +52,6 @@ momentum.Core.prototype = {
     },
     updateWeather: function () {
         this.weatherCtrl.fetchWeather(this.lat, this.lon, this.setWeather.bind(this));
-    },
-    updateQuote: function () {
-        this.quoteCtrl.fetchQuote(this.setQuote.bind(this));
-
     },
     start: function () {
         if (!navigator.geolocation) {
@@ -83,7 +67,6 @@ momentum.Core.prototype = {
             this.updateWeather();
         }.bind(this), error);
         this.setTime();
-        this.updateQuote();
         this.render();
     },
     render: function () {
@@ -91,8 +74,6 @@ momentum.Core.prototype = {
         this.greetingEl.text("Good " + this.salutation);
         this.ampmEl.text(this.ampm);
         this.weatherEl.text(this.weatherStr);
-        this.quoteEl.text(this.quoteStr);
-        this.quoteAuthor.text(this.quoteAuthorStr);
     }
 };
 
